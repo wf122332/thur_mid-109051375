@@ -1,20 +1,29 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireSystemBase : MonoBehaviour
-{
-    [SerializeField, Header("¤l¼u¹w»sª«")]
-    private GameObject prefabBullet;
-    [SerializeField, Header("§ğÀ»ÂI")]
-    private Transform pointSpawn;
+/// <summary>
+/// å­å½ˆç”Ÿæˆç³»çµ±åŸºåº•
+/// </summary>
 
-    //¦Û­q¤èªk
-    //¥Í¦¨¤l¼u
-    //protected «OÅ@¯Å§O:¤¹³\¤lÃş§O¦s¨ú
-    protected void SpawnBullet()
+namespace s
+
+{
+
+    public class FireSystemBase : MonoBehaviour
     {
-        //¹ê¨Ò¤Æ(ª«¥ó,®y¼Ğ,¨¤«×)
-        Instantiate(prefabBullet, pointSpawn.position, pointSpawn.rotation);
+        [SerializeField, Header("å­å½ˆé è£½ç‰©")]
+        private GameObject prefabBullet;
+        [SerializeField, Header("æ”»æ“Šé»")]
+        private Transform pointSpawn;
+
+        //è‡ªè¨‚æ–¹æ³•
+        //ç”Ÿæˆå­å½ˆ
+        //protected ä¿è­·ç´šåˆ¥:å…è¨±å­é¡åˆ¥å­˜å–
+        protected void SpawnBullet()
+        {
+            //å¯¦ä¾‹åŒ–(ç‰©ä»¶,åº§æ¨™,è§’åº¦)
+            Instantiate(prefabBullet, pointSpawn.position, pointSpawn.rotation);
+        }
     }
 }

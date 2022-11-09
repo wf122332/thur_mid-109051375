@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 角色控制
+/// </summary>
+
 namespace S
 { 
 
@@ -12,17 +16,7 @@ public class PlayerController : MonoBehaviour
     private float speedVertical = 3.5f;
     [SerializeField, Range(0, 10)]
     private float speedHorizontal = 4f;
-
-    [Header("圖片")]
-    [SerializeField]
-    private Sprite pictureUp;
-    [SerializeField]
-    private Sprite pictureMiddle;
-    [SerializeField]
-    private Sprite pictureDown;
-
-    [SerializeField, Header("圖片渲染元件")]
-    private SpriteRenderer spr;
+ 
 
     private void Update()
     {
@@ -36,29 +30,8 @@ public class PlayerController : MonoBehaviour
             speedHorizontal * Time.deltaTime * h,
             speedVertical * Time.deltaTime * v, 0);
 
-        if (v > 0)
-        {
-            print("往上");
-            spr.sprite = pictureUp;
-        }
-        if (v == 0)
-        {
-            print("中間");
-            spr.sprite = pictureMiddle;
-        }
-        if (v < 0)
-        {
-            print("往下");
-            spr.sprite = pictureDown;
-        }
-
-
-
+           
     }
-
-
-
-
 
 }
 }

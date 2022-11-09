@@ -1,15 +1,23 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyFireSystem : FireSystemBase
-{
-    [SerializeField, Header("¥Í¦¨¶¡¹j"), Range(0, 3)]
-    private float interval = 1.5f;
+/// <summary>
+/// æ•µäººæ”»æ“Šç³»çµ±
+/// </summary>
 
-    private void Awake()
+namespace s
+{
+
+    public class EnemyFireSystem : FireSystemBase
     {
-        //©µ¿ğ­«½Æ©I¥s(¤èªk¦WºÙ,©µ¿ğ®É¶¡,¶¡¹j)
-        InvokeRepeating("SpawnBullet", 0, interval);
+        [SerializeField, Header("ç”Ÿæˆé–“éš”"), Range(0, 3)]
+        private float interval = 1.5f;
+
+        private void Awake()
+        {
+            //é‡è¤‡å‘¼å«å­å½ˆç”ŸæˆæŒ‡ä»¤
+            InvokeRepeating("SpawnBullet", 0, interval);
+        }
     }
 }

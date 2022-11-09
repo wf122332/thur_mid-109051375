@@ -1,15 +1,23 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerFireSystem : FireSystemBase
+/// <summary>
+/// 玩家攻擊系統
+/// </summary>
+
+namespace s
 {
-    private void Update()
+
+    public class PlayerFireSystem : FireSystemBase
     {
-        //press"space"> make bullet
-        if (Input.GetKeyDown(KeyCode.Space))
+        private void Update()
         {
-            SpawnBullet();
+            //press"space"> make bullet
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SpawnBullet();
+            }
         }
     }
 }
